@@ -1,0 +1,111 @@
+<html>
+    <head>
+        
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>      
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <!-- Latest compiled and minified CSS--> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+        <link href="style.css" rel="stylesheet"></link>
+
+
+        
+    </head>
+    
+    <body>
+        <!-- la balise div va accueillir le composant React Page -->
+        <div id="root"></div>
+
+        <script  type="text/babel">           
+
+            function Task(props){
+                return ( 
+                    <tr>
+                        <td class="col-1 d-none align-middle p-0" id="id">{props.id}</td>
+                        <td class="col-1 align-middle p-0" id="nameTask">{props.name}</td>
+                        <td class="col-3 align-middle p-0" id="descriptionTask">{props.description}</td>
+                        <td class="col-1 align-middle p-0" id="priorityTask">{props.priority}</td>
+                        <td class="col-1 align-middle p-0" id="statutTask">{props.status}</td>                        
+                    </tr>
+                )
+            }
+
+            function Page(props){
+                let taskComponents = props.tasks.map(t => {
+                    return (
+                        <Task  name={t.name} description={t.description} priority={t.priority} status={t.status} />
+                    )
+                })
+                return (
+                    <div class="container rounded-3 border border-2 my-5" >
+                        <div class="col-9 text right">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    ${displayTitle()}                           
+                                    <hr />
+                                    <div class="card mask-custom">
+                                        <div class="card-body p-5 shadow-lg p-3 mb-5 bg-white rounded">
+                                            <div class="text-center">                        
+                                                <div class="pb-3">
+                                                    ICI SERA LE FORMULAIRE !
+                                                </div>
+                                                <div class="row">
+                                                <table class="table table-condensed mb-0">
+                                                    <thead> 
+                                                        <tr>
+                                                            <th>Todo</th>
+                                                            <th>Details</th>
+                                                            <th>Priority</th>                                                    
+                                                            <th>Avancement</th>                                                    
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {taskComponents}
+                                                    </tbody>
+                                                    </table>
+                                                </div>       
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>    
+                )
+            }
+
+            fetch("/get_tasks_json")
+            .then(function(response){
+                return response.json()
+                })
+            .then(function(json){
+                //console.log(json)
+                //on déclenche ici car la fonction fetch est asynchrone
+                const domContainer = document.getElementById('root');
+            ReactDOM.render(
+                <Page tasks={json} />, 
+                domContainer
+            );
+                //return json
+            }) 
+            
+            
+            function displayTitle(){
+            return (                                           
+                <h2 class="my-4">Ma To Do List</h2>
+                )
+            
+            }            
+            
+        </script>
+
+    </body>
+</html>

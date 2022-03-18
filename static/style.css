@@ -1,0 +1,156 @@
+          
+
+            body{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size:small;
+            }
+
+            .headerPage{
+                color:midnightblue;
+                font-size:60px;
+                height:15%;
+            }
+
+           
+            h1:first-letter{
+                color:cornflowerblue
+
+            }
+
+            .subheader{
+                height:8px;
+                padding-left:0;
+                padding-right:0;                            
+            }
+
+            .menuTitle{
+                width: 100%;
+                height:30px;
+                background-color:rgba(196, 153, 245, 0.308) ;
+                color:midnightblue;
+                margin-top:45px;
+                margin-bottom:20px;
+            } 
+
+
+            .form-control{                
+                font-size:10px;
+                font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+               
+            }
+
+            .form-control:hover{
+                border:double #6f42c1;
+            }
+
+                                 
+
+            #listTasksCButton:hover{
+                border:double #6f42c1;
+            }        
+
+
+            h2{
+                color:midnightblue;
+                font-size:45px;
+            }
+
+            h4{
+                font-size:20px;  
+            }
+
+           
+
+            .bienvenue{
+                font-size:25px;
+            }
+
+            #cardAddNewtask{
+                background-color:rgba(196, 153, 245, 0.082);
+                border:2px solid #6f42c1;
+            }
+
+            .addNewtask,#addbutton1{
+                background-color:rgba(196, 153, 245, 0.082);
+                color:midnightblue;
+                font-size:10px;
+                font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            }
+
+            #addbutton1:hover{
+                border:double #6f42c1;
+                color:midnightblue;
+            }
+
+            tbody {
+                height: auto;
+                overflow: auto;
+            }
+
+            
+            tr:nth-child(2n+1){
+                background-color:rgba(196, 153, 245, 0.055) ;
+            }  
+
+            tbody tr{              
+                border-bottom:1px solid #6f42c1;
+                max-height: 100px; 
+                       
+            } 
+
+            tr:hover{
+                background-color: rgba(155, 198, 238, 0.233);
+
+            } 
+
+            table{
+                font-size:10px;
+            }  
+
+            .table td{
+                border-bottom:1px solid #6f42c1
+            }
+            
+
+            .table thead th{
+                border-bottom:2px solid #6f42c1;
+                font-size:13px;
+                color:midnightblue;
+                background-color:rgba(196, 153, 245, 0.308) ;
+                text-align: left;
+            }     
+
+            .right{
+                padding-top:30px;
+                padding-bottom:30px;
+                padding-right:30px;
+                padding-left:30px;
+                background-color:rgba(196, 153, 245, 0.082);
+                height: 75vh;
+                overflow: auto;
+            } 
+            
+            #formTaskTable > td{
+                color:purple;
+            }   
+            
+            .textDecorationLine{
+                text-decoration: line-through;
+                color:grey
+            } 
+
+            #selectStatus,#rightbuttonSave,#rightbuttonDelete{
+                color:#6f42c1;
+                background-color: rgba(196, 153, 245, 0.082);
+                margin-bottom:15px;                
+            } 
+
+            #selectStatus:hover,#rightbuttonSave:hover,#rightbuttonDelete:hover{             
+                border:double #6f42c1;            
+            }             
+
+            
+            
+
+
+            
