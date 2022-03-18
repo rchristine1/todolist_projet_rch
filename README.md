@@ -1,32 +1,26 @@
 # Introduction 
 Cette application est une application Web de gestion de tâches, les tâches étant stockées dans une base de données.
 
-Elle permet de:
-_ lister les tâches à faire
-_ ajouter des tâches à faire
-_ différencier une tâche quand elle est terminée
+Elle permet de lister les tâches à faire, ajouter des tâches, afficher les tâches terminées
 
-Elle permet également de :
-_ modifier le statut d'une tâche
-_ supprimer une tâche
-_ de visualiser seulement les tâches terminées
+
+Elle permet également de modifier le statut d'une tâche, supprimer une tâche
 
 La tâche a un nom, une description, une priorité, une date limite et un statut d'avancement.
 
 ## Installation
 
-Le répertoire racine de l'application est todolist  
+Installer tous les composants dans un répertoire par exemple todolist  
 
 ### Serveur
-Pour pouvoir démarrer et utiliser cette application, il est nécessaire d'installer :
-_ express
-_ mysql
+Pour pouvoir démarrer et utiliser cette application, il est nécessaire d'installer nodejs, express et mysql
 
 Il est possible d'installer demon mais ce n'est pas obligatoire.
 
 ### Base de données
 
-Un script de création de la table est disponible dans le répertoire todolist/bdd :
+Créer une database mysql taskdb.
+Un script de création de la table est disponible dans le répertoire bdd :
 todolist_creation.sql
 
 ### Configuration
