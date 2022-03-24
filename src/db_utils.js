@@ -83,4 +83,7 @@ module.exports = {
   insertTask : insertTask,
   dbGetTasksCompleted:dbGetTasksCompleted,
   deleteTask:deleteTask,
+  connectToMySQL:connectToMySQL,
+  
+
 }

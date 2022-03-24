@@ -2,18 +2,17 @@
 
             body{
                 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                font-size:small;
+                font-size:10px;
             }
 
             .headerPage{
                 color:midnightblue;
                 font-size:60px;
-                height:15%;
             }
 
            
             h1:first-letter{
-                color:cornflowerblue
+                color:#6610f2;
 
             }
 
@@ -23,43 +22,23 @@
                 padding-right:0;                            
             }
 
-            .menuTitle{
-                width: 100%;
-                height:30px;
+            .bodyTask{
                 background-color:rgba(196, 153, 245, 0.308) ;
-                color:midnightblue;
-                margin-top:45px;
-                margin-bottom:20px;
-            } 
-
-
-            .form-control{                
-                font-size:10px;
-                font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-               
             }
-
-            .form-control:hover{
-                border:double #6f42c1;
-            }
-
-                                 
 
             #listTasksCButton:hover{
                 border:double #6f42c1;
-            }        
-
+            } 
 
             h2{
-                color:midnightblue;
-                font-size:45px;
+                font-size:20px; 
+                color:midnightblue; 
             }
 
-            h4{
-                font-size:20px;  
+            h3{
+                font-size:12px;
+                color:#6610f2;
             }
-
-           
 
             .bienvenue{
                 font-size:25px;
@@ -70,16 +49,10 @@
                 border:2px solid #6f42c1;
             }
 
-            .addNewtask,#addbutton1{
+            .addNewtask{
                 background-color:rgba(196, 153, 245, 0.082);
-                color:midnightblue;
                 font-size:10px;
                 font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-            }
-
-            #addbutton1:hover{
-                border:double #6f42c1;
-                color:midnightblue;
             }
 
             tbody {
@@ -94,7 +67,8 @@
 
             tbody tr{              
                 border-bottom:1px solid #6f42c1;
-                max-height: 100px; 
+                min-height: 200px; 
+                max-height:250px;
                        
             } 
 
@@ -110,13 +84,12 @@
             .table td{
                 border-bottom:1px solid #6f42c1
             }
-            
 
             .table thead th{
                 border-bottom:2px solid #6f42c1;
                 font-size:13px;
-                color:midnightblue;
-                background-color:rgba(196, 153, 245, 0.308) ;
+                color:white;
+                background: #6610f2;
                 text-align: left;
             }     
 
@@ -139,15 +112,15 @@
                 color:grey
             } 
 
-            #selectStatus,#rightbuttonSave,#rightbuttonDelete{
-                color:#6f42c1;
-                background-color: rgba(196, 153, 245, 0.082);
-                margin-bottom:15px;                
-            } 
+            #selectStatus{
+                color:grey;
+                font-size:10px;
 
-            #selectStatus:hover,#rightbuttonSave:hover,#rightbuttonDelete:hover{             
-                border:double #6f42c1;            
-            }             
+            }
+
+          
+
+           
 
             
             

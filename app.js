@@ -27,6 +27,18 @@ app.get('/get_tasks', (req, res) => {
   )
 })
 
+app.get('/get_tasks_table', (req, res) => { 
+
+  db.dbGetTasks(
+
+    function (error, results, fields) {  
+      let html = tpl.getTasksToDoTable(results)
+      res.send(html)
+    },
+  )
+})
+
+
 app.get('/get_tasks_completed', (req, res) => {  
   db.dbGetTasksCompleted(
 
@@ -54,7 +66,7 @@ function initStatus(ptab,pValue){
 }  
 }
 
-function checkEqual(pValue,pToday){
+function checkIfEqual(pValue,pToday){
   if (pValue === pToday){
     return 1
   } else {
@@ -64,7 +76,7 @@ function checkEqual(pValue,pToday){
 
 app.post('/update_status', (request, response) => {
   let valueStatusToDB = initStatus(TAB_STATUS_BDD,request.body['updatedStatus'])
-  let isToday = checkEqual(request.body['checkToday'],IS_FOR_TODAY)
+  let isToday = checkIfEqual(request.body['checkToday'],IS_FOR_TODAY)
     
   let formData=[isToday,valueStatusToDB,request.body['taskId']] 
    db.updateStatus(formData,function (){

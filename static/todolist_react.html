@@ -24,16 +24,17 @@
         <!-- la balise div va accueillir le composant React Page -->
         <div id="root"></div>
 
-        <script  type="text/babel">           
+        <script  type="text/babel">        
 
-            function Task(props){
+            function Task(props){               
                 return ( 
                     <tr>
-                        <td class="col-1 d-none align-middle p-0" id="id">{props.id}</td>
-                        <td class="col-1 align-middle p-0" id="nameTask">{props.name}</td>
+                        <td className="col-1 d-none align-middle p-0" id="id">{props.id}</td>
+                        <td className="col-1 align-middle p-0" id="nameTask">{props.name}</td>
                         <td class="col-3 align-middle p-0" id="descriptionTask">{props.description}</td>
                         <td class="col-1 align-middle p-0" id="priorityTask">{props.priority}</td>
-                        <td class="col-1 align-middle p-0" id="statutTask">{props.status}</td>                        
+                        <td class="col-1 align-middle p-0" id="statutTask">{props.status}</td> 
+                        <td class="col-1 align-middle p-0" id="deadLineTask">{props.deadline}</td>                        
                     </tr>
                 )
             }
@@ -41,7 +42,7 @@
             function Page(props){
                 let taskComponents = props.tasks.map(t => {
                     return (
-                        <Task  name={t.name} description={t.description} priority={t.priority} status={t.status} />
+                        <Task  name={t.name} description={t.description} priority={t.priority} status={t.status} deadline={t.deadline}/>
                     )
                 })
                 return (
@@ -49,7 +50,10 @@
                         <div class="col-9 text right">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    ${displayTitle()}                           
+                                    {displayTitle()}                                   
+                                    <button type="button" className="btn toggle-btn" aria-pressed="false">
+                                        <span>Add</span>                                                    
+                                        </button>
                                     <hr />
                                     <div class="card mask-custom">
                                         <div class="card-body p-5 shadow-lg p-3 mb-5 bg-white rounded">
@@ -64,7 +68,8 @@
                                                             <th>Todo</th>
                                                             <th>Details</th>
                                                             <th>Priority</th>                                                    
-                                                            <th>Avancement</th>                                                    
+                                                            <th>Avancement</th> 
+                                                            <th>Before</th>                                                   
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -100,11 +105,11 @@
             
             function displayTitle(){
             return (                                           
-                <h2 class="my-4">Ma To Do List</h2>
+                <h2 class="my-4">Ma To Do List                
+                </h2>
                 )
             
-            }            
-            
+            }
         </script>
 
     </body>
