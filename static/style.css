@@ -55,6 +55,10 @@
                 font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
             }
 
+            .bgpriority{
+                background-color: midnightblue;
+            }
+
             tbody {
                 height: auto;
                 overflow: auto;
@@ -66,15 +70,14 @@
             }  
 
             tbody tr{              
-                border-bottom:1px solid #6f42c1;
-                min-height: 200px; 
-                max-height:250px;
+                border-bottom:1px solid #6f42c1;                
+                min-height: 80px; 
+                max-height:150px;
                        
             } 
 
             tr:hover{
                 background-color: rgba(155, 198, 238, 0.233);
-
             } 
 
             table{
@@ -82,7 +85,7 @@
             }  
 
             .table td{
-                border-bottom:1px solid #6f42c1
+                border-bottom:1px solid #6f42c1;
             }
 
             .table thead th{

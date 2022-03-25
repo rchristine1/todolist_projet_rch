@@ -50,7 +50,7 @@ function template(results,filter){
                         <div class="col-12 text right">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    ${displayTitle()}
+                                    ${displayTitle(" Ma To Do List")}
                                     ${displayActions(filter)}
                                 </div> 
                             </div>       
@@ -64,8 +64,7 @@ function template(results,filter){
                     </div>                            
                 </div>
             </div>            
-            <script src="/js/display_notdisplay_AddTask.js"></script> 
-            <script src="/js/template_utils.js"></script>
+            <script src="/js/display_notdisplay_AddTask.js"></script>             
         </body>
       </html>
     `
@@ -75,26 +74,26 @@ function template(results,filter){
 function headHtml(){
     return`
         <!-- Latest compiled and minified CSS--> 
-            <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         
         
-            <!-- Latest compiled and minified JavaScript -->
-            <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>-->
+        <!-- Latest compiled and minified JavaScript -->
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>-->
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-            crossorigin="anonymous"></script>            
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>            
 
         
-            <link href="style.css" rel="stylesheet"></link>
+        <link href="style.css" rel="stylesheet"></link>
 
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     `        
 }
 
@@ -112,9 +111,9 @@ function headerPage(){
 }
 
 //TITLE MY TO DO LIST
-function displayTitle(){
+function displayTitle(title){
     return`        
-        <h2 class="h4">Ma To Do List
+        <h2 class="h4">${title}
             <img class="mx-3 my-4" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp" alt="check" width="40">
         </h2>
     `
@@ -123,28 +122,28 @@ function displayTitle(){
 function displayActionsHTML(){
     return`
     <div class="container" style="background-color: #e3f2fd;">
-                                        <div class="row pt-2">    
-                                            <div class="col-auto my-1">
-                                                <button class="form-control" style="background-color: #e3f2fd;" id="togg1">Add</button>
-                                            </div>
-                                            <div class="col-auto my-1">
-                                                <form class="horizontal" action="/get_tasks_completed" method="GET" enctype="application/x-www-form-urlencoded">
-                                                    <input class="form-control"  id="listTasksCButton" style="background-color: #e3f2fd;" type="submit" value="Only Done"/>
-                                                </form>
-                                            </div>
-                                            <div class="col-auto my-1">
-                                                <form class="horizontal" action="/get_tasks_table" method="GET" enctype="application/x-www-form-urlencoded">
-                                                    <input class="form-control"  id="listTasksCButton" style="background-color: #e3f2fd;" type="submit" value="ToDoList Table"/>
-                                                </form>
-                                            </div>
-                                            <div class="col-auto my-1 text-end">
-                                                <form>
-                                                    <input type = "button" value="Back" class="btn btn-outline-secondary " onclick= "history.back()">
-                                                    <!--<a href="/get_tasks" class="btn btn-outline-secondary ">Back</a><br />-->
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div class="row pt-2">    
+            <div class="col-auto my-1">
+                <button class="form-control" style="background-color: #e3f2fd;" id="togg1">Add</button>
+            </div>
+            <div class="col-auto my-1">
+                <form class="horizontal" action="/get_tasks_completed" method="GET" enctype="application/x-www-form-urlencoded">
+                    <input class="form-control"  id="listTasksCButton" style="background-color: #e3f2fd;" type="submit" value="Only Done"/>
+                </form>
+            </div>
+            <div class="col-auto my-1">
+                <form class="horizontal" action="/get_tasks_table" method="GET" enctype="application/x-www-form-urlencoded">
+                    <input class="form-control"  id="listTasksCButton" style="background-color: #e3f2fd;" type="submit" value="ToDoList Table"/>
+                </form>
+            </div>
+            <div class="col-auto my-1 text-end">
+                <form>
+                    <input type = "button" value="Back" class="btn btn-outline-secondary " onclick= "history.back()">
+                    <!--<a href="/get_tasks" class="btn btn-outline-secondary ">Back</a><br />-->
+                </form>
+            </div>
+        </div>
+    </div>
     `
 }
 
@@ -228,7 +227,7 @@ function formAddtask(){
                 </div>
                 <div class="col-auto">
                         <input class="border-0 addNewTask form-control input-lg" type="date" id="inlineFormInputDate1" required name="deadline"
-                        value=DateDay() min=DateDay() max="2030-12-31">
+                        value=${DateDay()} min=${DateDay()} max="2030-12-31">
                 </div>
                 <div class="col-auto">
                     <label id="labeladdbutton1" for="addbutton1"/></label>
@@ -269,7 +268,7 @@ function buildLineTaskHtml(task) {
                     <span id="taskStatus${task['id']}" >${valueStatus}</span>
                 </div>
                 <div class="col col-4 text-end" style="padding-right:0px">
-                    <span class="bg-dark text-white" style="font-size:13px;">${valuePriority}</span>
+                    <span class="text-white bgpriority" style="font-size:13px">${valuePriority}</span>
                     <p class="text-muted">
                     ${deadline}
                     </p>   
@@ -289,26 +288,17 @@ function buildLineTaskHtml(task) {
                         <div class="row">    
                             <div class="col col-9">
                                 <input name="taskId" type="hidden" value=${task['id']}>                            
-                                    <select class="form-select form-select-sm p-0" name="updatedStatus" id="selectStatus">
-                                        <option selected>${valueStatus}</option>
-                                        <option value=${VALUE_STATUS_INPROGRESS}>${TASK_STATUS_INPROGRESS}</option>
-                                        <option value=${VALUE_STATUS_DONE}>${TASK_STATUS_DONE}</option>
-                                        <option value=${VALUE_STATUS_CANCELLED}>${TASK_STATUS_CANCELLED}</option>
-                                        <option value=${VALUE_STATUS_TODO}>${TASK_STATUS_TODO}</option>                        
-                                    </select> 
-                                    <label class="sr-only text-muted mb-0" for="selectStatus">Select the status</label>
+                                ${formStatus(valueStatus)}
+                                <label class="sr-only text-muted mb-0" for="selectStatus">Select the status</label>
                             </div>
                             <div class="col col-3">
-                                <input class="form-inline btn-xs xs-3 rounded btn-primary" id="rightbuttonSave" type="submit" value="Save">
+                                ${formSave()}
                             </div>
                         </div>
                     </form>                   
                 </div> 
                 <div class="col col-4 text-end">
-                    <form id="formDeleteTask${task['id']}" class="pb-0" action="/delete_task" method="POST" enctype="application/x-www-form-urlencoded">
-                        <input id="deleteTaskId${task['id']}" name="deleteTaskId" type="hidden" value=${task['id']}>    
-                        <input class="btn-xs rounded btn-secondary pr-0" id="rightbuttonDelete" type="submit" value="Delete">
-                    </form>
+                    ${formDelete(task['id'])}
                 </div>
             </div>
         </div>
@@ -320,15 +310,49 @@ function buildLineTaskHtml(task) {
     
 }
 
+function DateDay() {
+    let inputFormat=Date();
+    function pad(s) { return (s < 10) ? '0' + s : s; }
+    var d = new Date(inputFormat)
+    return [ d.getFullYear(),pad(d.getMonth() + 1),pad(d.getDate())].join('-')
+}
+
+function formStatus(taskValue){
+    return`
+        <select class="form-select form-select-sm p-0" name="updatedStatus" id="selectStatus">
+            <option selected>${taskValue}</option>
+            <option value=${VALUE_STATUS_INPROGRESS}>${TASK_STATUS_INPROGRESS}</option>
+            <option value=${VALUE_STATUS_DONE}>${TASK_STATUS_DONE}</option>
+            <option value=${VALUE_STATUS_CANCELLED}>${TASK_STATUS_CANCELLED}</option>
+            <option value=${VALUE_STATUS_TODO}>${TASK_STATUS_TODO}</option>                        
+        </select> 
+    `
+}
+
+function formSave(){
+    return`
+        <input class="form-inline btn-xs xs-3 rounded btn-primary" id="rightbuttonSave" type="submit" value="Save">
+    `
+}
+
+function formDelete(taskId){
+    return`
+        <form id="formDeleteTask${taskId}" class="pb-0" action="/delete_task" method="POST" enctype="application/x-www-form-urlencoded">
+            <input id="deleteTaskId${taskId}" name="deleteTaskId" type="hidden" value=${taskId}>    
+            <input class="btn-xs rounded btn-secondary pr-0" id="rightbuttonDelete" type="submit" value="Delete">
+        </form>
+    `
+}
+
 //CONVERT PRIORITY BDD > FRONT
 function convertPriority(pPriority){
     switch(pPriority) {
-    case VALUE_PRIORITY_HIGH:
-        return TASK_PRIORITY_HIGH;
-    case VALUE_PRIORITY_MEDIUM:
-        return TASK_PRIORITY_MEDIUM;
-    case VALUE_PRIORITY_LOW:
-        return TASK_PRIORITY_LOW;
+        case VALUE_PRIORITY_HIGH:
+            return TASK_PRIORITY_HIGH;
+        case VALUE_PRIORITY_MEDIUM:
+            return TASK_PRIORITY_MEDIUM;
+        case VALUE_PRIORITY_LOW:
+            return TASK_PRIORITY_LOW;
     }
 }
 
@@ -382,6 +406,7 @@ function showTasksTable2(results){
                                     <th>Before</th>
                                     <th>Status</th>
                                     <th>Update</th>
+                                    <th></th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -405,13 +430,13 @@ function buildBodyTabTasksHtml2(results) {
 
 function showPropertyTaskHiddenHTML(valueColumn,idRootName,pValueProperty,idTask){
     return`
-    <td class="col-${valueColumn} d-none align-middle p-0" id="${idRootName}${idTask}">${pValueProperty}</td>
+        <td class="col-${valueColumn} d-none align-middle p-0" id="${idRootName}${idTask}">${pValueProperty}</td>
     `
 }
 
 function showTaskPropertyHTML(valueColumn,idRootName,pValueProperty,idTask){
     return`
-    <td class="col-${valueColumn} align-middle p-0" id="${idRootName}${idTask}">${pValueProperty===null?'':pValueProperty}</td>
+        <td class="col-${valueColumn} align-middle p-0" id="${idRootName}${idTask}">${pValueProperty===null?'':pValueProperty}</td>
     `
 }
 
@@ -429,37 +454,30 @@ function buildLineTaskHtml2(task) {
             ${showPropertyTaskHiddenHTML("statusBdd",task['status'],task['id'])}
             ${showPropertyTaskHiddenHTML("priorityBdd",task['priority'],task['id'])}           
             ${showTaskPropertyHTML(1,"nameTask",task['name'],task['id'])}            
-            ${showTaskPropertyHTML(2,"descriptionTask",task['description'],task['id'])}            
+            ${showTaskPropertyHTML(3,"descriptionTask",task['description'],task['id'])}            
             ${showTaskPropertyHTML(1,"priorityTask",valuePriority,task['id'])}            
             ${showTaskPropertyHTML(1,"deadLineTask",deadline,task['id'])}            
             ${showTaskPropertyHTML(1,"statusTask",valueStatus,task['id'])}            
             <td class="col-2 align-items-center pt-1 pb-0">
                 <div class="form-row align-items-center">
-                    <input id="taskId${task['id']}" name="taskId" type="hidden" value=${task['id']}>
-                    <select class="custom-select custom-select-sm xs-3  dropdown-menu-xs-left p-0 mb-2 " name="updatedStatus" id="selectStatus">
-                        <option selected>${valueStatus}</option>
-                        <option value=${VALUE_STATUS_INPROGRESS}>${TASK_STATUS_INPROGRESS}</option>
-                        <option value=${VALUE_STATUS_DONE}>${TASK_STATUS_DONE}</option>
-                        <option value=${VALUE_STATUS_CANCELLED}>${TASK_STATUS_CANCELLED}</option>
-                        <option value=${VALUE_STATUS_TODO}>${TASK_STATUS_TODO}</option>                        
-                    </select>                            
-                    <input classe="btn-sm xs-3 rounded" id="rightbuttonSave" type="submit" value="Save">
+                    <input name="taskId" type="hidden" value=${task['id']}>                            
+                    ${formStatus(valueStatus)}
                 </div>
+            </td>
+            <td class="col-1 align-items-center pt-1 pb-0">         
+                ${formSave()}                
             </td>        
         </form>  
             <td class="col-1 align-items-center pt-1 pb-0">             
                 <div class="col-1">                                          
-                    <form id="formDeleteTask${task['id']}" class="pb-0" action="/delete_task" method="POST" enctype="application/x-www-form-urlencoded">
-                        <input id="deleteTaskId${task['id']}" name="deleteTaskId" type="hidden" value=${task['id']}>    
-                        <input classe="btn-sm xs-3 rounded " id="rightbuttonDelete" type="submit" value="Delete">
-                    </form>
+                    ${formDelete(task['id'])}
                 </div>
             </td>       
         `
     if (valueStatus === TASK_STATUS_DONE){
         return `<tr class="textDecorationLine" >${lineTab}</tr>`
     } else{          
-    return `<tr id="${task['id']}">${lineTab}</tr>`
+        return `<tr id="${task['id']}">${lineTab}</tr>`
     }
 }
 
@@ -478,6 +496,12 @@ module.exports = {
     formAddtask:formAddtask,
     buildBodyTabTasksHtml:buildBodyTabTasksHtml,
     buildLineTaskHtml:buildLineTaskHtml,
+    displayActions:displayActions,
+    displayActionsHTML:displayActionsHTML,
+    DateDay:DateDay,
+    formSave:formSave,
+    formDelete:formDelete,
+    formStatus:formStatus,
     convertStatus:convertStatus,
     convertPriority:convertPriority,
     revertStatus:revertStatus,
@@ -485,9 +509,7 @@ module.exports = {
     buildBodyTabTasksHtml2:buildBodyTabTasksHtml2,
     buildLineTaskHtml2:buildLineTaskHtml2,
     showPropertyTaskHiddenHTML:showPropertyTaskHiddenHTML,
-    showTaskPropertyHTML:showTaskPropertyHTML,
-    displayActions:displayActions,
-    displayActionsHTML:displayActionsHTML,
+    showTaskPropertyHTML:showTaskPropertyHTML,  
 
 }
 

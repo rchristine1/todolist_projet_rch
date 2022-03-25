@@ -31,10 +31,10 @@
                     <tr>
                         <td className="col-1 d-none align-middle p-0" id="id">{props.id}</td>
                         <td className="col-1 align-middle p-0" id="nameTask">{props.name}</td>
-                        <td class="col-3 align-middle p-0" id="descriptionTask">{props.description}</td>
-                        <td class="col-1 align-middle p-0" id="priorityTask">{props.priority}</td>
-                        <td class="col-1 align-middle p-0" id="statutTask">{props.status}</td> 
-                        <td class="col-1 align-middle p-0" id="deadLineTask">{props.deadline}</td>                        
+                        <td className="col-3 align-middle p-0" id="descriptionTask">{props.description}</td>
+                        <td className="col-1 align-middle p-0" id="priorityTask">{props.priority}</td>
+                        <td className="col-1 align-middle p-0" id="statutTask">{props.status}</td> 
+                        <td className="col-1 align-middle p-0" id="deadLineTask">{props.deadline}</td>                        
                     </tr>
                 )
             }
@@ -46,23 +46,23 @@
                     )
                 })
                 return (
-                    <div class="container rounded-3 border border-2 my-5" >
-                        <div class="col-9 text right">
-                            <div class="row">
-                                <div class="col-12 text-center">
+                    <div className="container rounded-3 border border-2 my-5" >
+                        <div className="col-9 text right">
+                            <div className="row">
+                                <div className="col-12 text-center">
                                     {displayTitle()}                                   
                                     <button type="button" className="btn toggle-btn" aria-pressed="false">
                                         <span>Add</span>                                                    
                                         </button>
                                     <hr />
-                                    <div class="card mask-custom">
-                                        <div class="card-body p-5 shadow-lg p-3 mb-5 bg-white rounded">
-                                            <div class="text-center">                        
-                                                <div class="pb-3">
+                                    <div className="card mask-custom">
+                                        <div className="card-body p-5 shadow-lg p-3 mb-5 bg-white rounded">
+                                            <div className="text-center">                        
+                                                <div className="pb-3">
                                                     ICI SERA LE FORMULAIRE !
                                                 </div>
-                                                <div class="row">
-                                                <table class="table table-condensed mb-0">
+                                                <div className="row">
+                                                <table className="table table-condensed mb-0">
                                                     <thead> 
                                                         <tr>
                                                             <th>Todo</th>
@@ -105,7 +105,7 @@
             
             function displayTitle(){
             return (                                           
-                <h2 class="my-4">Ma To Do List                
+                <h2 className="my-4">Ma To Do List                
                 </h2>
                 )
             

@@ -52,3 +52,29 @@ Pour tester la conversion du statut base de données de la tâche en chaîne de 
 
     node test_convertStatus.js
 
+Pour tester la différence d'affichage entre les pages, lancer dans todolist/src
+
+    node test_displayActions.js
+
+Pour tester l'affichage des boutons d'actions lancer dans todolist/src    
+
+    node test_displayActionsHTML.js
+
+Pour tester l'affichage du Titre, lancer dans todolist/src    
+
+    node test_displayTitle.js
+
+Pour tester l'affichage de la page Welcome, lancer dans todolist/src    
+
+    node test_displayWelcomePage.js
+
+Pour tester l'affichage de la page To Do sans tableau, lancer dans todolist/src    
+
+    node test_showTasksTable.js
+
+Pour tester l'affichage de la page To Do avec tableau, lancer dans todolist/src    
+
+    node test_showTasksTable2.js
+
+    
+
